@@ -1,0 +1,13 @@
+<p><strong>Pen</strong></p>
+<%= form_tag action: 'create_pen' do %>
+<%= render 'store/partials/pen' %>
+<%= submit_tag "New Pen", class: "btn btn-success btn-sm btn-lg" %>
+<% end %>
+<hr>
+<p><strong>Notebook</strong></p>
+<%= form_tag action: 'create_notebook' do %>
+<%= render 'store/partials/notebook' %>
+<%= submit_tag "New Notebook", class: "btn btn-success btn-sm btn-lg" %>
+<% end %>
+<hr>
+<%= link_to "List", list_path%>

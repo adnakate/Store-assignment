@@ -1,0 +1,9 @@
+<p><strong>Edit : <%= @product.type %></strong></p>
+<%= form_tag action: 'update_store', id: @product.id do %>
+	<% if @product.type == "Pen" %>
+	<%= render 'store/partials/pen' %>
+	<% else %>
+	<%= render 'store/partials/notebook' %>
+	<% end %>
+<%= submit_tag "Edit", class: "btn btn-success btn-sm btn-lg" %>
+<% end %>

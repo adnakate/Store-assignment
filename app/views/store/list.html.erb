@@ -1,0 +1,25 @@
+<div class="container">           
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <% @products.each do |product| %>
+    <tbody>
+      <tr>
+        <td><%= product.type %></td>
+        <td><%= product.name %></td>
+        <td><%= product.product_price %></td>
+        <td><%= link_to "Edit", { action: "edit_store_type", controller: 'store', id: product.id },  class: "btn btn-primary"  %></td>
+      </tr>      
+    </tbody>
+    <% end if @products.present? %>
+  </table>
+</div>
+<hr>
+<p>Total Pen Price : <%= @pen_price %></p>
+<p>Total Notebook Price : <%= @notebook_price %></p>
