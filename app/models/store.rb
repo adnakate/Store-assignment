@@ -1,6 +1,6 @@
 class Store < ApplicationRecord
   enum status: { disabled: 0, enabled: 1 }
-  enum color: %w(blue red yellow black)
+  # enum color: %w(blue red yellow black)
   validates :type,
             :name,
             :product_price,

@@ -8,7 +8,6 @@ class StoreController < ApplicationController
       redirect_to :list
     else
       flash[:alert] = "Cannot create new pen!"
-      redirect_to :store
     end
   end
 
@@ -18,7 +17,6 @@ class StoreController < ApplicationController
       redirect_to :list
     else
       flash[:alert] = "Cannot create new notebook!"
-      render :store
     end
   end
 
@@ -31,7 +29,6 @@ class StoreController < ApplicationController
       redirect_to :list
     else
       flash[:notice] = "Cannot update"
-      redirect_to :list
     end
   end
 

@@ -1,5 +1,5 @@
 <p><label for = "name">Name</label>:<%= text_field 'store', 'name',required: true %></p>
 <p><label for = "product_price">Product Price</label>:<%= number_field 'store', 'product_price',  step: :any, required: true %></p>
-<p><label for = "color">Color</label>:<%= text_field 'store', 'color' %></p>
+<p><label for = "color">Color</label>:<%= select_tag 'store[color]', options_for_select(["yellow","black","red","blue"]), include_blank: true %></p>
 <p><label for = "description">Description</label>:<%= text_field 'store', 'description', required: true %>  <label for = "status">Status</label>:<%= check_box('store', 'status', {}, 'enabled', 'disabled') %></p>
 <p><label for = "inward_date">Inward Date</label>:<%= date_select('store', 'inward_date') %></p>

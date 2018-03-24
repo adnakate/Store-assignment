@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <p><strong>Edit : <%= @product.type %></strong></p>
 <%= form_tag action: 'update_store', id: @product.id do %>
 	<% if @product.type == "Pen" %>
